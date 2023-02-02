@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Modifier <%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<%- include('./header') %>
+<main class="mainAddBook">
+    <h1>Modifier <%= title %></h1>
+    <form action="/book/update/<%= id %>" method="post" class="formContainer">
+        <div class="inputContainerFormAddBook">
+            <label for="isbn">ISBN :</label>
+            <input type="number" id="isbn" name="isbn" value="<%= isbn %>">
+        </div>
+        <div class="inputContainerFormAddBook">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" value="<%= title %>">
+        </div>
+        <div class="inputContainerFormAddBook">
+            <label for="author">Auteur :</label>
+            <input type="text" id="author" name="author" value="<%= auteur %>">
+        </div>
+        <div class="inputContainerFormAddBook">
+            <label for="description">Description :</label>
+            <input type="text" id="description" name="description" value="<%= description %>">
+        </div>
+        <div class="inputContainerFormAddBook">
+            <label for="genre">Genre :</label>
+            <select id="genre" name="genre" >
+                <option value="Aucun">Choisir un genre</option>
+                <option value="Romance" <%= genre === "Romance" ? "selected" : "" %>>Romance</option>
+                <option value="Développement personnel" <%= genre === "Développement personnel" ? "selected" : "" %>>Développement personnel</option>
+                <option value="Enfant" <%= genre === "Enfant" ? "selected" : "" %>>Enfant</option>
+                <option value="Thriller" <%= genre === "Thriller" ? "selected" : "" %>>Thriller</option>
+                <option value="Science-fiction" <%= genre === "Science-fiction" ? "selected" : "" %>>Science-fiction</option>
+                <option value="Fantasy" <%= genre === "Fantasy" ? "selected" : "" %>>Fantasy</option>
+            </select>
+        </div>
+        <div class="inputContainerFormAddBook">
+            <label for="price">Price :</label>
+            <input type="number" id="price" name="price" min="1" max="100" value="<%= price %>">
+        </div>
+        <button type="submit">Modifier</button>
+    </form>
+</main>
+</body>
+</html>
+
+
+
+

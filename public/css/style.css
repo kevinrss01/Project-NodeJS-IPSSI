@@ -1,0 +1,83 @@
+* {
+    font-family: Arial;
+}
+
+body{
+    all: unset;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: dodgerblue;
+    padding: 0px 10px;
+}
+
+.header h1{
+    transition: color 0.3s ease-out;
+}
+
+.header h1:hover{
+    color: white;
+}
+
+.mainAddBook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.booksContainer{
+  display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.bookCard{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    width: 600px;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    background-color: dodgerblue;
+    border-radius: 25px;
+}
+
+.inputContainerFormAddBook{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    width: 80%;
+}
+
+
+.inputContainerFormAddBook input{
+    width: 200Px;
+    height: 30px;
+}
+
+.mainAddBook button{
+    font-size: 20px;
+    margin: 7px;
+}
+
+.categoriesContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    align-items: center;
+}
+

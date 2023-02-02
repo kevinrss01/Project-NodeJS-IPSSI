@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <%- include('./header') %>
+        <main class="">
+            <div class="cardSingleBook">
+                <h3><%= title %></h3>
+                <p><b>Description: </b><%= description %></p>
+                <p><b>Genre : </b><%= genre %></p>
+                <p><%= price %> €</p>
+                <p><b>Auteur: </b><%= auteur %></p>
+                <p><b>Date de publication : </b><%= publishDate %></p>
+                <p><b>ISBN : </b><%= isbn %></p>
+            </div>
+            <a href="/book/delete/<%= id %>">Supprimer ce livre</a>
+            <a href="/book/updatePage/<%= id %>">Modifier ce livre</a>
+        </main>
+    </body>
+</html>
+
+
+
+
