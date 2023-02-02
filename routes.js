@@ -20,6 +20,35 @@ router.get("/", (req, res) => {
   });
 });
 
+// Get books by category
+router.get("/categories/:category", (req, res) => {
+  let category;
+  if (req.params.category === "romance") {
+    category = "Romance";
+  } else if (req.params.category === "thriller") {
+    category = "Thriller";
+  } else if (req.params.category === "developpement-personnel") {
+    category = "Développement personnel";
+  } else if (req.params.category === "science-fiction") {
+    category = "Science-fiction";
+  } else if (req.params.category === "enfant") {
+    category = "Enfant";
+  } else if (req.params.category === "fantasy") {
+    category = "Fantasy";
+  }
+
+  Book.find({ genre: category }, (error, data) => {
+    if (error) {
+      return console.error(error);
+    } else {
+      res.render("category", {
+        category: category,
+        books: data,
+      });
+    }
+  });
+});
+
 //Get Page add Book
 router.get("/addBook", (req, res) => {
   res.render("addBook");
@@ -78,7 +107,6 @@ router.get("/book/delete/:id", (req, res) => {
       return console.error(error);
     } else {
       res.redirect("/");
-      res.console.log("Book deleted");
     }
   });
 });

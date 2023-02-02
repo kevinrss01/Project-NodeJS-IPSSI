@@ -1,8 +1,6 @@
 import express from "express";
 import routes from "./routes.js";
 import bodyParser from "body-parser";
-import session from "express-session";
-import flash from "connect-flash";
 
 const app = express();
 app.set("view engine", "ejs");

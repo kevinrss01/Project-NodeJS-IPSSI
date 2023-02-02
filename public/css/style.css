@@ -1,4 +1,10 @@
-* {
+a{
+    all: unset;
+    font-family: "Arial Rounded MT Bold";
+    cursor: pointer;
+}
+
+*{
     font-family: Arial;
 }
 
@@ -8,10 +14,35 @@ body{
 
 .header{
     display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.top-header{
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: dodgerblue;
-    padding: 0px 10px;
+    padding: 0 10px;
+}
+
+.header img{
+    width: 150px;
+    height: auto;
+}
+
+.header .addBookButton{
+    all: unset;
+    background-color: #009B77;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    transition: padding 0.3s ease-out;
+}
+
+.header .addBookButton:hover{
+    padding: 17px;
+    cursor: pointer;
 }
 
 .header h1{
@@ -34,6 +65,7 @@ body{
     justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
+    background-color: #F9FAFA;
 }
 
 .bookCard{
@@ -77,7 +109,17 @@ body{
 .categoriesContainer{
     display: flex;
     justify-content: space-between;
-    margin: 0 15px;
     align-items: center;
+    border-bottom: 1px solid grey;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.categoriesContainer a{
+ transition: color 0.3s ease-out;
+}
+
+.categoriesContainer a:hover{
+    color: #1E91D5;
 }
 
