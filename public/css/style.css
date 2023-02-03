@@ -283,6 +283,87 @@ option {
 }
 
 .containerCardSingleBook{
+    margin-top: 40px;
+    background-color: #009B77;
+    height: 450px;
+    width: 800px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.cardSingleBook {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardSingleBook h3{
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+    width: 450px;
+}
+
+.cardSingleBook .infoSingleBook{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.infoSingleBook p{
+    width: 420Px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+}
+
+.imageSingleBook{
+    width: 300px;
+    height: 300px;
+    background-image: url("/images/book-image2.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.buttonSinglePage{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.buttonSinglePage .deleteButton{
+    border: lightgray 1px solid;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    margin-right: 15px;
 
 }
+
+.deleteButton:hover{
+    color: red;
+}
+
+.buttonSinglePage .updateBook{
+    border: lightgray 1px solid;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.updateBook:hover{
+    color: blue;
+
+}
+
+
 
